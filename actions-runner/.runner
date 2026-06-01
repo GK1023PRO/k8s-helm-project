@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 2,
+  "agentName": "k8s-runner",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus3.actions.githubusercontent.com/iWlQtQDN1QldgoUXusPzU84Q8Mw38PvLcmarTEtKZP4gtKleD3/",
+  "gitHubUrl": "https://github.com/GK1023PRO/k8s-helm-project",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}

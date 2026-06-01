@@ -1,0 +1,17 @@
+name: Kubernetes CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy with Helm
+        run: |
+          helm upgrade --install nginx-release ./nginx-chart
