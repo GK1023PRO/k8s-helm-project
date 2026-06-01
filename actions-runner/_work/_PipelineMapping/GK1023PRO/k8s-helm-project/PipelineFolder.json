@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "GK1023PRO/k8s-helm-project",
+  "pipelineDirectory": "k8s-helm-project",
+  "workspaceDirectory": "k8s-helm-project\\k8s-helm-project",
+  "repositories": {
+    "GK1023PRO/k8s-helm-project": {
+      "repositoryPath": "k8s-helm-project\\k8s-helm-project",
+      "lastRunOn": "06/02/2026 00:26:54 +03:00"
+    }
+  },
+  "lastRunOn": "06/02/2026 01:46:05 +03:00"
+}

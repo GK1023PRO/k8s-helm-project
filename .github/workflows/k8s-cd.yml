@@ -1,8 +1,10 @@
 name: Kubernetes CD Pipeline
 
 on:
-  push:
-    branches: [ "main" ]
+  workflow_run:
+    workflows: ["Kubernetes CI Pipeline"]
+    types:
+      - completed
 
 jobs:
   deploy:
@@ -12,6 +14,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set image
+        run: |
+          echo "IMAGE=ghcr.io/${{ github.repository_owner }}/node-app:${{ github.sha }}" >> $GITHUB_ENV
+
       - name: Deploy with Helm
         run: |
-          helm upgrade --install nginx-release ./nginx-chart
+          helm upgrade --install node-app ./node-app-chart \
+            --set image.repository=ghcr.io/${{ github.repository_owner }}/node-app \
+            --set image.tag=${{ github.sha }}
