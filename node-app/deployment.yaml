@@ -13,7 +13,8 @@ spec:
         app: node-app
     spec:
       containers:
-      - name: node-app
-        image: node-app:v1
-        ports:
-        - containerPort: 3000
+        - name: node-app
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 3000
