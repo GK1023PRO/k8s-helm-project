@@ -5,15 +5,15 @@ metadata:
   name: nginx-ingress
 
 spec:
+  ingressClassName: nginx
   rules:
   - host: nginx.local
     http:
       paths:
       - path: /
         pathType: Prefix
-
         backend:
           service:
-            name: nginx
+            name: nginx-release-nginx-chart
             port:
               number: 80
