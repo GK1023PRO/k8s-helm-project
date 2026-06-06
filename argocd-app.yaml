@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/GK1023PRO/k8s-helm-project
     targetRevision: main
-    path: node-app-chart
+    path: node-app
 
   destination:
     server: https://kubernetes.default.svc

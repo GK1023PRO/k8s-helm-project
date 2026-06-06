@@ -28,8 +28,10 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/gk1023pro/node-app:latest ./node-app
+          ls -la
+          docker build -t ghcr.io/gk1023pro/node-app:latest .e-app
 
       - name: Push Docker image
         run: |
+        
           docker push ghcr.io/gk1023pro/node-app:latest
